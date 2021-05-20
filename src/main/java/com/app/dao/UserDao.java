@@ -18,7 +18,7 @@ public class UserDao {
 
     //1st method: requesting data from database
     /**
-     * "jdbcTemplate" - is a part of String library responsible for DB queries
+     * "jdbcTemplate" - is a part of Spring library responsible for DB queries
      * "jdbcTemplate" has a method that makes queries to DB: "query"
      * "query" makes sql query to DB
      * "query" receives response from DB as a list of rows with data
