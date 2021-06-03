@@ -5,10 +5,18 @@
     <title>Admin :: All Subcategories</title>
 </head>
 <body>
+    <div style="display: flex;">
+        <div style="margin-left: 10px;">
+            <a href="/_admin/subcategories">All</a>
+        </div>
+        <div th:each="cat : ${categories}" style="margin-left: 10px;">
+            <a th:href="'/_admin/subcategories/' + ${cat.id}" th:text="${cat.name}"></a>
+        </div>
+    </div>
     <div th:each="c : ${subcategories}" style="display: flex;">
         <div th:text="${c.id} + ': '"></div>
         <div th:text="${c.name}"></div>
-        <div th:text="'(' + ${c.category.id} + ')'"></div>
+        <div th:text="'(' + ${c.category.name} + ')'"></div>
     </div>
     <div>
         <form th:action="@{/_admin/subcategories}" th:object="${newSubcategory}" method="POST">
