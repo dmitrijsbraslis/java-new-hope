@@ -42,6 +42,10 @@ public class AdminService {
         return catalogDao.getItems();
     }
 
+    public List<CatalogItem> getItemsById(long id) {
+        return catalogDao.getItemsById(id);
+    }
+
     public void storeItem(CatalogItem item) {
         //Здесь могла бы быть ваша валидация :)
         String newPrice = item.getPrice().toString().replace(',', '.');
