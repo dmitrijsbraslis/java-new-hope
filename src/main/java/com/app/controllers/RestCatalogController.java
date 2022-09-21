@@ -27,6 +27,7 @@ public class RestCatalogController {
     @GetMapping("/getItems/{id}")
     public List<CatalogItem> getItemsById(@PathVariable(value = "id") long id) {
         return adminService.getItemsById(id);
+        //hzbcjhdgskjsdhkjsdhkjsdhkjsdhc
     }
 
     @CrossOrigin
