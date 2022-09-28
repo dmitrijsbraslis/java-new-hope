@@ -3,6 +3,7 @@ package com.app.model;
 public class Category {
     private long id;
     private String name;
+    //Privet vsem iz preispodni
 
     public long getId() {
         return id;
